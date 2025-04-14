@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin to do list</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./src/index.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="wrapper" id="header-wrapper">
+        <h1 class="app-title">Odin ToDo List</h1>
+      </div>
+    </header>
+    <main class="main" id="footer">
+      <div class="wrapper" id="main-wrapper">
+        <form action="" class="add-to-do-form" id="add-to-do-form">
+          <div class="form-title-container" id="form-title-container">
+            <label for="title-input" class="title-label" id="title-label"
+              >Title:
+            </label>
+            <input
+              type="text"
+              class="title-input"
+              id="title-input"
+              placeholder="Add a title"
+            />
+          </div>
+          <div class="form-priority-container" id="form-priority-container">
+            <label
+              class="priority-label"
+              id="priority-label"
+              for="priority-select"
+              >Priority:
+            </label>
+            <select
+              name="priorities"
+              id="priority-seelect"
+              class="priority-select"
+            >
+              <option value="">--Select a priority--</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div
+            class="form-description-container"
+            id="form-description-container"
+          >
+            <label
+              for="description-input"
+              class="description-label"
+              id="description-label"
+              >Description: </label
+            ><input
+              type="text"
+              class="description-input"
+              id="description-input"
+              placeholder="Add a description"
+            />
+          </div>
+          <button type="submit" form="add-to-do-form">Add</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="wrapper" id="footer-wrapper"></div>
+    </footer>
+  </body>
+</html>

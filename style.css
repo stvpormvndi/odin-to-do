@@ -1,0 +1,46 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #100409;
+    --background: #fbeff4;
+    --primary: #cd4275;
+    --secondary: #df9a8b;
+    --accent: #d68b66;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fbeff4;
+    --background: #100409;
+    --primary: #bd3265;
+    --secondary: #742f20;
+    --accent: #994e29;
+  }
+}
+
+* {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1180px;
+  padding: 0 1rem;
+}
+
+#header {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.app-title {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.to-do {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
