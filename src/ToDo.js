@@ -1,9 +1,9 @@
 export default class ToDo {
   constructor(
     title,
-    dueDate,
-    priority,
-    project,
+    project = null,
+    dueDate = null,
+    priority = "low",
     notes = "No notes have been added",
     description = "No description has been added."
   ) {

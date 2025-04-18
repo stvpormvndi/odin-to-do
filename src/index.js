@@ -15,6 +15,9 @@ const appContainer = new Container([peeing]);
 appContainer.toDoList = walking;
 appContainer.toDoList = crafting;
 
+appContainer.projectList = "crafting";
+appContainer.projectList = "studying";
+
 function createToDo(toDoInstance, index, array) {
   function deleteToDoInstance(e) {
     e.currentTarget.removeEventListener("click", deleteToDoInstance);
@@ -52,6 +55,13 @@ function createToDo(toDoInstance, index, array) {
   return toDoContainer;
 }
 
+function createProjectOption(x) {
+  const xOption = document.createElement("option");
+  xOption.value = x;
+  xOption.textContent = x;
+  return xOption;
+}
+
 function createForm(array) {
   const formContainer = document.getElementById("main-wrapper");
   const addToDoForm = document.createElement("form");
@@ -85,9 +95,35 @@ function createForm(array) {
 window.addEventListener("load", () => {
   console.log("The window is loaded");
   const toDoContainer = document.getElementById("main-wrapper");
+  const projectSelect = document.getElementById("project-select");
+  const addToDoButton = document.getElementById("add-to-do-button");
   appContainer.toDoArray.forEach((x, index, array) => {
-    //console.log(x);
+    // console.log(x);
     toDoContainer.appendChild(createToDo(x, index, array));
+  });
+  appContainer.projectArray.forEach((x) => {
+    // console.log(x);
+    projectSelect.appendChild(createProjectOption(x));
+  });
+  addToDoButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("I've prevented the default action!!!!");
+    const titleInput = document.getElementById("title-input");
+    const dueDateInput = document.getElementById("due-date-input");
+    const prioritySelect = document.getElementById("priority-select");
+    const projectSelect = document.getElementById("project-select");
+    const descriptionInput = document.getElementById("description-input");
+    const notesInput = document.getElementById("notes-input");
+    if (titleInput.value) {
+      appContainer.toDoList = new ToDo(
+        titleInput.value,
+        projectSelect.value,
+        dueDateInput.value,
+        prioritySelect.value,
+        notesInput.value,
+        descriptionInput.value
+      );
+    }
   });
   //createForm(appContainer);
 });

@@ -27,6 +27,19 @@
               placeholder="Add a title"
             />
           </div>
+          <div class="form-due-date-container" id="form-due-date-container">
+            <label
+              for="due-date-input"
+              class="due-date-label"
+              id="due-date-label"
+              >Due date: </label
+            ><input
+              type="text"
+              class="due-date-input"
+              id="due-date-input"
+              placeholder="Add a date"
+            />
+          </div>
           <div class="form-priority-container" id="form-priority-container">
             <label
               class="priority-label"
@@ -45,6 +58,13 @@
               <option value="high">High</option>
             </select>
           </div>
+          <div class="form-project-container" id="dorm-project-container">
+            <label for="project-select" class="project-label" id="project-label"
+              >Project: </label
+            ><select name="project" id="project-select" class="project-select">
+              <option value="">--Choose a project--</option>
+            </select>
+          </div>
           <div
             class="form-description-container"
             id="form-description-container"
@@ -61,7 +81,25 @@
               placeholder="Add a description"
             />
           </div>
-          <button type="submit" form="add-to-do-form">Add</button>
+          <div class="form-notes-container" id="form-notes-container">
+            <label for="notes-input" class="notes-label" id="notes-label"
+              >Notes: </label
+            ><input
+              type="text"
+              class="notes-input"
+              id="notes-input"
+              placeholder="Add your notes here"
+            />
+          </div>
+          <button
+            type="submit"
+            form="add-to-do-form"
+            class="add-to-do-button"
+            id="add-to-do-button"
+          >
+            Add
+          </button>
+          <button type="reset">Clear</button>
         </form>
       </div>
     </main>
