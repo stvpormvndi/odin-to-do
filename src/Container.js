@@ -31,6 +31,10 @@ export default class Container {
     this.toDoArray.splice(index, 1);
   }
 
+  editObject(index, object) {
+    this.toDoArray.splice(index, 1, object);
+  }
+
   returnByProject(projectName) {
     let returnArray = [];
     for (let i = 0; i < this.toDoArray.length; i++) {
